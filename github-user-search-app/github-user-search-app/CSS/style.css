@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #141d2f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
+  color: white;
+  font-family: "Space Mono";
+}
+
+body h1 {
+  font-size: 26px;
+  line-height: 38px;
+}
+
+@media (min-width: 700px) {
+  body h1 {
+    font-size: 31px;
+  }
+}
+
+body h3 {
+  font-family: "Space Mono";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (min-width: 700px) {
+  body h3 {
+    font-size: 25px;
+  }
+}
+
+body h4 {
+  font-family: "Space Mono";
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@media (min-width: 700px) {
+  body h4 {
+    font-size: 16px;
+  }
+}
+
+body a {
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body a.socialLinks {
+  cursor: pointer;
+}
+
+body a.socialLinks:hover {
+  text-decoration: underline;
+}
+
+body p {
+  font-family: "Space Mono";
+  font-size: 13px;
+  text-align: justify;
+}
+
+@media (min-width: 700px) {
+  body p {
+    font-size: 16px;
+  }
+}
+
+body .container {
+  margin: 1em 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+@media (min-width: 700px) {
+  body .container {
+    margin: 5em 0;
+  }
+}
+
+body .container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container nav h1 {
+  color: white;
+}
+
+body .container nav #toggleButton {
+  cursor: pointer;
+}
+
+body .container nav div img:hover {
+  color: white;
+}
+
+body .container nav div.inactive {
+  display: none;
+}
+
+body .container nav div.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container nav div.active img {
+  margin-left: 1em;
+}
+
+body .container .searchBox {
+  background-color: #1e2a47;
+  padding: 0.5em 0.5em;
+  margin: 1em auto;
+  width: 100%;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.171);
+          box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.171);
+}
+
+body .container .searchBox input {
+  height: 30px;
+  background-color: #1e2a47;
+  border: 0;
+  color: white;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  font-family: "Space Mono";
+}
+
+@media (min-width: 700px) {
+  body .container .searchBox input {
+    font-size: 20px;
+  }
+}
+
+body .container .searchBox ::-webkit-input-placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+body .container .searchBox :-ms-input-placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+body .container .searchBox ::-ms-input-placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+body .container .searchBox ::placeholder {
+  color: white;
+  font-size: 12px;
+}
+
+@media (min-width: 700px) {
+  body .container .searchBox ::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  body .container .searchBox :-ms-input-placeholder {
+    font-size: 15px;
+  }
+  body .container .searchBox ::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  body .container .searchBox ::placeholder {
+    font-size: 15px;
+  }
+}
+
+body .container .searchBox .tempMess {
+  color: red;
+  width: 30%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+@media (min-width: 700px) {
+  body .container .searchBox .tempMess {
+    font-size: 15px;
+  }
+}
+
+body .container .searchBox .show {
+  visibility: hidden;
+}
+
+body .container .searchBox button {
+  background: #0079ff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+body .container .searchBox button:hover {
+  background: #6da8eb;
+}
+
+@media (min-width: 700px) {
+  body .container .searchBox button {
+    padding: 1.2em 3em;
+  }
+}
+
+body .container main {
+  background-color: #1e2a47;
+  color: white;
+  padding: 1em 1.5em;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.13);
+          box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.13);
+}
+
+@media (min-width: 700px) {
+  body .container main {
+    height: 55vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+body .container main section.userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  body .container main section.userInfo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body .container main section.userInfo .imageProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1em;
+}
+
+body .container main section.userInfo .imageProfile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media (min-width: 700px) {
+  body .container main section.userInfo .imageProfile img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+body .container main section.userInfo .userDesc {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+@media (min-width: 700px) {
+  body .container main section.userInfo .userDesc {
+    margin-left: 3em;
+    display: -ms-grid;
+    display: grid;
+  }
+  body .container main section.userInfo .userDesc h4 {
+    font-size: 20px;
+  }
+  body .container main section.userInfo .userDesc .secondInfo {
+    margin: 0.5em 0;
+  }
+}
+
+body .container main section.desc {
+  margin: 1em 0;
+}
+
+body .container main section.stat {
+  background-color: #141d2f;
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container main section.stat h4 {
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  body .container main section.stat h4 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 700px) {
+  body .container main section.media {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+  }
+}
+
+body .container main section.media div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5em 0em;
+}
+
+body .container main section.media div img {
+  width: 15px;
+  height: auto;
+  margin-right: 0.8em;
+}
+
+body .container main section.media div h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .notAvailabe {
+  color: #b0b9c7;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+body.light-theme {
+  background-color: #f6f8ff;
+}
+
+body.light-theme .container nav h1 {
+  color: black;
+}
+
+body.light-theme .container nav div h3 {
+  color: #697c9a;
+}
+
+body.light-theme .container .searchBox {
+  background-color: white;
+}
+
+body.light-theme .container .searchBox input {
+  background-color: white;
+  color: #697c9a;
+}
+
+body.light-theme .container .searchBox ::-webkit-input-placeholder {
+  color: #697c9a;
+}
+
+body.light-theme .container .searchBox :-ms-input-placeholder {
+  color: #697c9a;
+}
+
+body.light-theme .container .searchBox ::-ms-input-placeholder {
+  color: #697c9a;
+}
+
+body.light-theme .container .searchBox ::placeholder {
+  color: #697c9a;
+}
+
+body.light-theme .container .searchBox button {
+  color: white;
+}
+
+body.light-theme .container main {
+  background-color: white;
+  color: #697c9a;
+}
+
+body.light-theme .container main section.stat {
+  background-color: #f6f8ff;
+}
+
+body.light-theme .container main section.media a {
+  color: #697c9a;
+}
+/*# sourceMappingURL=style.css.map */

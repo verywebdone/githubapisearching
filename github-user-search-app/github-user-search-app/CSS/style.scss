@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$background1: rgb(20, 29, 47);
+$background2: rgb(30, 42, 71);
+$background3: rgb(0, 121, 255);
+
+$colorFont1: white;
+$colorFont2: black;
+$colorFont3: white;
+$colorFont4: white;
+
+$tablet: 700px;
+$desktop: 1000px;
+
+@mixin bpTablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin bpdesktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body {
+  background-color: $background1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  color: $colorFont1;
+  font-family: "Space Mono";
+
+  h1 {
+    font-size: 26px;
+    line-height: 38px;
+
+    @include bpTablet {
+      font-size: 31px;
+    }
+  }
+
+  h3 {
+    font-family: "Space Mono";
+    font-size: 16px;
+    line-height: 24px;
+
+    @include bpTablet {
+      font-size: 25px;
+    }
+  }
+
+  h4 {
+    font-family: "Space Mono";
+    font-size: 13px;
+    line-height: 20px;
+
+    @include bpTablet {
+      font-size: 16px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $colorFont1;
+    display: flex;
+    align-items: center;
+  }
+
+  a.socialLinks {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-family: "Space Mono";
+    font-size: 13px;
+    text-align: justify;
+
+    @include bpTablet {
+      font-size: 16px;
+    }
+  }
+
+  .container {
+    margin: 1em 0;
+    width: 90%;
+    max-width: 800px;
+
+    @include bpTablet {
+      margin: 5em 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        color: $colorFont1;
+      }
+
+      #toggleButton {
+        cursor: pointer;
+      }
+
+      div img:hover {
+        color: white;
+      }
+
+      div.inactive {
+        display: none;
+      }
+
+      div.active {
+        display: flex;
+
+        img {
+          margin-left: 1em;
+        }
+      }
+    }
+
+    .searchBox {
+      background-color: $background2;
+      padding: 0.5em 0.5em;
+      margin: 1em auto;
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 2px 2px 8px 0 (rgba(0, 0, 0, 0.171));
+
+      input {
+        height: 30px;
+        background-color: $background2;
+        border: 0;
+        color: $colorFont4;
+        outline: none;
+        width: 100%;
+        text-align: center;
+        font-family: "Space Mono";
+
+        @include bpTablet {
+          font-size: 20px;
+        }
+      }
+
+      ::placeholder {
+        color: $colorFont1;
+        font-size: 12px;
+
+        @include bpTablet {
+          font-size: 15px;
+        }
+      }
+
+      .tempMess {
+        color: red;
+        width: 30%;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 10px;
+
+        @include bpTablet {
+          font-size: 15px;
+        }
+      }
+
+      .show {
+        visibility: hidden;
+      }
+
+      button {
+        background: rgb(0, 121, 255);
+        border: none;
+        color: $colorFont3;
+        font-weight: bold;
+        padding: 0.8em 1.5em;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background: rgb(109, 168, 235);
+        }
+
+        @include bpTablet() {
+          padding: 1.2em 3em;
+        }
+      }
+    }
+
+    main {
+      background-color: $background2;
+      color: $colorFont1;
+      padding: 1em 1.5em;
+      border-radius: 20px;
+      box-shadow: 3px 3px 8px 0 (rgba(0, 0, 0, 0.13));
+
+      @include bpTablet {
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      section.userInfo {
+        display: flex;
+
+        @include bpTablet {
+          align-items: center;
+          justify-content: center;
+        }
+
+        .imageProfile {
+          display: flex;
+          align-items: center;
+          margin-right: 1em;
+
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            @include bpTablet {
+              width: 150px;
+              height: 150px;
+            }
+          }
+        }
+
+        .userDesc {
+          flex-basis: 80%;
+
+          @include bpTablet {
+            margin-left: 3em;
+            display: grid;
+
+            h4 {
+              font-size: 20px;
+            }
+
+            .secondInfo {
+              margin: 0.5em 0;
+            }
+          }
+        }
+      }
+
+      section.desc {
+        margin: 1em 0;
+      }
+
+      section.stat {
+        background-color: $background1;
+        border-radius: 10px;
+        padding: 1em 1.2em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+          font-size: 12px;
+          text-align: center;
+
+          @include bpTablet {
+            font-size: 15px;
+          }
+        }
+      }
+
+      section.media {
+        @include bpTablet {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.5em;
+        }
+
+        div {
+          display: flex;
+          margin: 0.5em 0em;
+
+          img {
+            width: 15px;
+            height: auto;
+            margin-right: 0.8em;
+          }
+
+          h4 {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .notAvailabe {
+    color: rgb(176, 185, 199);
+    font-weight: bold;
+    border-radius: 10px;
+  }
+}
+
+body.light-theme {
+  background-color: rgb(246, 248, 255);
+  .container {
+    nav {
+      h1 {
+        color: black;
+      }
+
+      div h3 {
+        color: rgb(105, 124, 154);
+      }
+    }
+
+    .searchBox {
+      background-color: white;
+
+      input {
+        background-color: white;
+        color: rgb(105, 124, 154);
+      }
+
+      ::placeholder {
+        color: rgb(105, 124, 154);
+      }
+
+      button {
+        color: white;
+      }
+    }
+    main {
+      background-color: white;
+      color: rgb(105, 124, 154);
+
+      section.stat {
+        background-color: rgb(246, 248, 255);
+      }
+
+      section.media a {
+        color: rgb(105, 124, 154);
+      }
+    }
+  }
+}

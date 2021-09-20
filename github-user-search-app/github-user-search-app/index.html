@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <h1>devfinder</h1>
+      <div id="toggleButton">
+        <div class="toggleIcon active"><h3>LIGHT</h3><img src="./assets/icon-sun.svg" alt="sun icon"></div>
+        <div class="toggleIcon inactive"><h3>DARK</h3><img src="./assets/icon-moon.svg" alt="moon icon"></div>
+      </div>
+    </nav>
+    <section class="searchBox">
+      <img src="/assets/icon-search.svg" alt="search Icon">
+      <input id="userName" placeholder="Search GitHub username..." type="text">
+      <span class="tempMess show">Not Found</span>
+      <button id="submit" type="submit">Search</button>
+    </section>
+    <main>
+      <section class="userInfo">
+        <div class="imageProfile">
+          <img class="info link" src="./assets/583231.png" alt="User Image">
+        </div>
+        <div class="userDesc">
+          <h3 class="info firstInfo">The Octocat</h3>
+          <h4 class="info secondInfo">@octocat</h4>
+          <h4 class="info date">Joined 25 jan 2011</h4>
+        </div>
+      </section>
+      <section class="desc">
+        <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque officiis hic laudantium, voluptas qui perferendis?</p>
+      </section>
+        <section class="stat">
+          <h4 >repos</h4>
+          <h4>followers</h4>
+          <h4>following</h4>
+          <h4 class="info">8</h4>
+          <h4 class="info">3938</h4>
+          <h4 class="info">9</h4>
+        </section>
+        <section class="media">
+          <div><div class="img"><img src="./assets/icon-location.svg" alt="location icon"></div><a><h4 class="info">San Francicso</h4></a></div>
+          <div><div class="img"><img src="./assets/icon-website.svg" alt="website icon"></div><a target="_blank" class="socialLinks" href="https://"><h4 class="info socials">Not Available</h4></a></div>
+          <div><div class="img"><img src="./assets/icon-twitter.svg" alt="twitter/social icon"></div><a target="_blank" class="socialLinks" href="https://twitter.com/">@<h4 class="info socials">https://github.blog</h4></a></div>
+          <div><div class="img"><img src="./assets/icon-company.svg" alt="company icon"></div><a><h4 class="info socials">@github</h4></a></div>
+        </section>
+    </main>
+    
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
